@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Mini Store</h1>
+        <p class="subtitle">Simple and secure checkout</p>
+
+        <section>
+            <h2>Available Products</h2>
+
+            <div class="product">
+                <div>
+                    <h3>Wireless Mouse</h3>
+                    <p>₹500</p>
+                </div>
+                <button data-testid="add-mouse" id="add-mouse">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <div>
+                    <h3>Keyboard</h3>
+                    <p>₹1,000</p>
+                </div>
+                <button data-testid="add-keyboard" id="add-keyboard">
+                    Add to Cart
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Your Cart</h2>
+
+            <div id="cart-items" data-testid="cart-items">
+                <p>Your cart is empty.</p>
+            </div>
+
+            <h3 class="total">
+                Order Total: <span id="order-total"
+                data-testid="order-total">₹0</span>
+            </h3>
+        </section>
+
+        <section>
+            <h2>Customer Details</h2>
+
+            <label for="customer-name">Customer Name *</label>
+            <input
+                type="text"
+                id="customer-name"
+                data-testid="customer-name"
+                placeholder="Enter your name"
+                autocomplete="off"
+            >
+
+            <p id="error-message"
+               data-testid="error-message"
+               class="error"
+               role="alert"
+               aria-live="polite"></p>
+
+            <button id="place-order"
+                    data-testid="place-order"
+                    class="order-button">
+                Place Order
+            </button>
+
+            <div id="confirmation"
+                 data-testid="confirmation"
+                 class="confirmation"
+                 role="status"
+                 aria-live="polite"
+                 hidden>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
